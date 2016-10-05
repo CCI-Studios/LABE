@@ -1,0 +1,219 @@
+#logo {
+	width: auto;
+}
+
+.view-slideshow {
+	.bg-image {
+		height: 491px;
+	}
+
+	h2 {
+		font-size: 3.4em;
+	}
+
+	.views-field-nothing {
+
+		.slide-text {
+			font-size: 1.625em;
+		}
+
+		> span {
+
+			> div {
+				padding-right: 50%;
+			}
+		}
+	}
+}
+
+.header-block {
+
+	.content {
+		padding-right: 30%;
+	}
+}
+
+.contact-widget {
+	height: 365px;
+}
+
+#contact-map {
+	height: 365px;
+}
+
+.view-members-listing
+{	
+
+	.views-row:nth-child(odd)
+	{
+		background-color:#e7ebf5;
+	}
+
+	.view-content
+	{
+		margin-top:10px;
+	}
+
+	.views-field
+	{
+		display: inline-block;
+		width: 23%;
+		padding: 20px;
+		vertical-align: top;
+	}
+
+	.views-field-field-name-organization
+	{
+		width: 20%;
+	}
+
+	.views-field-field-phone-number
+	{
+	    width: 21%;
+	}
+
+	.views-field-field-website
+	{
+		width: 32%;
+	}
+
+	.views-field-field-business-category
+	{
+		width: 19%;
+	}
+
+
+
+	.sbSelector
+	{
+		border: 1px solid $blue;
+	}
+
+	.sbHolder
+	{	
+		position: relative;
+		li
+		{
+			list-style: none;
+			border-bottom: 1px solid $blue;
+
+
+			a
+			{
+				display: block;
+				padding: 10px;
+				color:$blue;
+				font-weight: bold;
+
+				&:hover
+				{
+					background:$blue;
+					color:white;
+
+				}
+			}
+		}
+
+		ul
+		{
+			position: absolute;
+			background: white;
+			width:200px;
+			padding-left: 0px;
+			border: 1px solid $blue;
+			z-index: 999;
+		}
+	}
+
+
+	.sbSelector
+	{
+		width: 200px;
+		display: block;
+		border: 1px solid $blue;
+		padding: 10px;
+		color:$blue;
+		font-weight: bold;
+		background:url(../images/arrow-down.png) no-repeat;
+		background-position: 95%;
+	}
+
+	
+
+	.sbSelector.changeback
+	{
+		background:url(../images/arrow-up.png) no-repeat !important;
+		background-position: 95%!important;
+	}
+
+	.view-filters
+	{
+		padding-left:60px;
+	}
+
+	.view-filters,
+	.view-header,
+	#edit-field-business-category-tid-wrapper
+	{
+		display: inline-block;
+	}
+
+	#edit-field-business-category-tid-wrapper
+	{
+		width: 218px;
+	}
+
+	.views-exposed-form
+	{	
+		.form-submit
+		{		
+			background: transparent;
+			border: 1px solid;
+			margin-top: 0px;
+			height: 40px;
+		}
+	
+		.description
+		{
+			display: none;
+		}
+
+		a
+		{
+			text-decoration: none;
+		}
+
+		.views-submit-button
+		{
+			padding-right: 0px;
+		}
+	}
+
+	.views-field-nothing 
+	{	
+		width:20px;
+		a
+		{
+			background: url(../images/arrow-down.png) no-repeat center;
+			width: 20px;
+			height: 20px;
+			font-size: 0px;
+			display: block;
+			color: transparent;
+		}
+	}
+
+	.view-header
+	{	
+		vertical-align: top;
+		padding-top:20px;
+		ul li
+		{
+			list-style: none;
+			display: inline-block;
+			margin: 0px;
+			font-size: 14px;
+		}
+	}
+}
+

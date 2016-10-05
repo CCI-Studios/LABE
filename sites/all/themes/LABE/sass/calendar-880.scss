@@ -1,0 +1,117 @@
+.view .date-nav-wrapper .pager {
+	.date-prev {
+		margin-left: 15px;
+	}
+
+	.date-next {
+		margin-right: 15px;
+	}
+}
+
+//calendar
+.view-calendar {
+	.month-view .full {
+		margin-top: 0;
+		
+		th.days {
+			display: table-cell;
+			background: $blue;
+			color: #ffffff;
+			height: 42px;
+			border-color: #d0d7eb;
+			font-weight: 100;
+			text-align: left;
+			padding: 0 9px;
+		}
+
+		tr {
+			&.date-box {
+				display: table-row;
+			}
+
+			&.single-day {
+				
+				td.single-day {
+					width: 14.285714286%;
+					display: table-cell;
+					height: 109px !important;
+					padding-bottom: 10px;
+				}
+
+				td.no-entry,
+				td.empty {
+					display: table-cell;
+				}
+			}
+		}
+
+
+		tr td.single-day.today,
+		td.date-box.today {
+			background: #e7ebf5;
+			border: 0;
+		}
+
+		tr td.single-day.today {
+			.views-field-title a {
+				font-weight: 100;
+				font-size: 16px;
+			}
+
+			.views-field-field-event-date span {
+				font-weight: bold;
+				font-size: 12px;
+			}
+		}
+
+		td {
+			border: 1px solid #d0d7eb;
+			padding: 0;
+
+			&.single-day div.monthview {
+				text-align: center;
+			}
+
+			.inner {
+				.item {
+					margin-top: 0;
+
+					&:first-child {
+						.views-field-nothing {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.views-field-title {
+				margin: 0 auto;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+    				overflow: hidden;
+    				width: 100px;
+
+				a {
+					font-size: 12px;
+					font-weight: 600;
+				}
+			}
+
+			.views-field-field-event-date {
+				margin: 0 0 3px;
+
+				.date-display-single {
+					line-height: 12px;
+				}
+			}
+
+			.monthday {
+				
+			}
+
+			.weekday {
+
+			}
+		}
+	}
+}

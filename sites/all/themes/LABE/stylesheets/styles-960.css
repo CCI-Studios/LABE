@@ -1,0 +1,10 @@
+.blue-right {
+  left: 40%; }
+  #header .blue-right {
+    left: 47%; }
+
+.not-960 {
+  display: none; }
+
+.only-960 {
+  display: block; }

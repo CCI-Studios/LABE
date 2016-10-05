@@ -1,0 +1,43 @@
+
+.view-members-listing .views-field
+{
+	display: block;
+	width: auto;
+}
+
+.view-member-description 
+{	
+	.right
+	{
+		float: none;
+		width: auto;
+	}
+
+	#profile-picture
+	{
+		float: none;
+		line-height: inherit;
+	}
+	
+}
+
+#user-register-form
+{
+	
+	 .form-item-regcode-simple,
+	 .captcha
+	 {
+	 	float: none;
+		margin-top: auto;
+	 }
+
+	 .captcha .form-item-captcha-response
+	 {	
+	 	position: relative;
+	 	right: auto;
+	 	label
+		{
+			width:270px;
+		}
+	 }
+}

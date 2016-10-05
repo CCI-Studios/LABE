@@ -1,0 +1,113 @@
+.btn-menu a {
+	display: none;
+}
+
+#block-system-main-menu {
+	position: relative;
+	float: right;
+	max-height: initial;
+	margin: -35px 35px 0 0;
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li.expanded {
+		position: relative;
+		cursor: pointer;
+
+		ul {
+			position: absolute;
+			left: 0;
+			background: $blue;
+			z-index: 11;
+			padding: 1em;
+			width: 175px;
+		}
+
+		li {
+			padding: 7px 0;
+			border-top: 1px solid #5c75b8;
+			&.first {
+				border-top: none;
+			}
+		}
+
+		&:hover {
+			ul {
+				display: block;
+			}
+		}
+	}
+
+	ul li ul {
+		display: none;
+	}
+
+	.content {
+		padding: 0;
+		> ul > li {
+			float: left;
+			padding: 0 12px;
+
+			li a {
+				padding-left: 0;
+			}
+
+			a,
+			.nolink {
+				padding: 0;
+				border: none;
+				width: auto;
+			}
+		}
+	}
+
+	&:before {
+		content: none;
+	}
+}
+
+#block-menu-menu-footer-menu {
+	float: right;
+	text-transform: uppercase;
+	padding: 25px 0;
+	position: relative;
+	z-index: 2;
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	.content {
+
+		> ul {
+			text-align: right;
+
+			> li {
+				display: inline-block;
+				padding: 0 7px;
+				&:before {
+					content: "/";
+					position: relative;
+					left: -9px;
+					color: #ffffff;
+				}
+				&.first:before {
+					content: "";
+				}
+			}
+		}
+	}
+
+	a {
+		color: #ffffff;
+	}
+}

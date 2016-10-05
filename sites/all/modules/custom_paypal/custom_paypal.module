@@ -1,0 +1,161 @@
+<?php
+
+/**
+ * Implements hook_user_insert().
+ */
+function custom_paypal_user_insert(&$edit, $account, $category) {
+        
+
+        if(arg(0)=='silver'||arg(0)=='gold')
+        {
+             $params = array();
+            
+            $params =$edit;
+            if($params['regcode_simple']==variable_get('regcode_simple', ''))
+            {   
+                $dis = variable_get('regcode_discount', ''); 
+                if(arg(0)=='silver')
+                {
+                     $sub_total=$params['profile_silver']['field_sub_total']['und'][0]['value'];
+                }
+                else if (arg(0)=='gold') {
+                     $sub_total=$params['profile_gold']['field_sub_total_gold']['und'][0]['value'];
+                }
+               
+                $after_dis=$sub_total-$dis;
+                $tax = (8/100)*$after_dis;
+                $total = $after_dis+$tax;
+
+                $params['tax']= $tax;
+            }
+            else
+            {
+               if(arg(0)=='silver')
+                {
+                     $sub_total=$params['profile_silver']['field_sub_total']['und'][0]['value'];
+                }
+                else if (arg(0)=='gold') {
+                     $sub_total=$params['profile_gold']['field_sub_total_gold']['und'][0]['value'];
+                }
+               
+                $tax = (8/100)*$sub_total;
+                $total = $tax + $sub_total;
+                $params['tax']= $tax;
+            }
+
+            $params['total']=$total;
+            $params['sub_total']=$sub_total;
+
+            if(arg(0)=='silver')
+            {
+                 $role = user_role_load_by_name("silver");
+                 user_multiple_role_edit(array($account->uid), 'add_role', $role->rid);
+            }
+            else if(arg(0)=='gold')
+            {
+                 $role = user_role_load_by_name("gold");
+                 user_multiple_role_edit(array($account->uid), 'add_role', $role->rid);
+            }
+            $to = 'hsanvaria@ccistudios.com';
+            $params['payment_method'] = $edit['payment-method'];
+
+            if($edit['payment-method']==0)
+            {     
+                drupal_mail('custom_paypal','admin',$to,language_default(),$params,"Labe 2016 <info@labe2016.com>");
+                drupal_goto($GLOBALS['base_url'].'/thank-you');
+            }
+            else
+            {
+                drupal_mail('custom_paypal','admin',$to,language_default(),$params,"Labe 2016 <info@labe2016.com>");
+                 _custom_paypal_ticket_purchase($params);  
+            }
+        }
+
+       
+  
+}
+
+
+function _custom_paypal_ticket_purchase($params)
+{   
+
+    $paypal_options = array();
+
+     if(arg(0)=='silver')
+     {
+        $paypal_options['amount'] =  $params['sub_total']; 
+      
+     }
+     else if(arg(0)=='gold')
+     {
+        $paypal_options['amount'] = $params['sub_total'];
+     
+     }
+     if($params['regcode_simple']==variable_get('regcode_simple', ''))
+    { 
+          $paypal_options['discount_amount'] = variable_get('regcode_discount', '');
+    }
+
+    $paypal_options['cmd'] = '_xclick'; // Varies depending on type of payment sent via PayPal
+    $paypal_options['business'] = "hsanvaria-facilitator-1@ccistudios.com" ; // PayPal account email
+    $paypal_options['page_style'] = 'primary'; // Set this in PayPal prefs, then change here (default = paypal)
+    $paypal_options['currency_code'] = 'CAD';
+    $paypal_options['email']=$params['mail'];
+    $paypal_options['quantity'] ='1';
+  
+    $paypal_options['handling'] = $params['tax'];
+    $paypal_options['return'] = 'thank-you'; 
+    $paypal_options['item_name'] = 'Subscription';
+    $paypal_options['no_shipping'] = '1'; // Don't prompt user for shipping address
+    $paypal_options['no_note'] = '1'; // Don't prompt user for extra information (note)
+    $paypal_options['rm'] = '1'; // Return method - 1 = browser redirected to return URL by GET method w/o variables
+    $paypal_options['return'] = $GLOBALS['base_url'].'/thank-you'; // Page to which user is returned
+    $paypal_options['cbt'] = 'Return to Labe';
+    _custom_paypal_goto_paypal($paypal_options);
+}
+
+
+function _custom_paypal_goto_paypal($paypal_options)
+{
+    // Build the URL/query for PayPal payment form.
+    $query = http_build_query($paypal_options, '', '&');
+    $url = 'https://www.sandbox.paypal.com/cgi-bin/webscr?' . $query;
+
+    // Redirect user to PayPal...
+    drupal_goto($url);
+}
+
+
+function custom_paypal_mail($key, &$message, $params)
+{ switch($key)
+    {
+                
+        case 'admin':
+
+
+            $submission='Name:';
+        	$submission.=$params['name']."\n\r";
+        	$submission.='Mail:';
+        	$submission.=$params['mail']."\n\r";
+            $message['subject'] = t('Labe Subscription form');
+            if($params['payment_method']==0)
+            {
+                $submission.="payment by cheque \n\r";
+            }
+            else if($params['payment_method']==1)
+            {
+                $submission.="Payment by paypal verify the payment details before activating the account \n\r";
+            }
+
+            $body =  $submission;
+            $body .='For detailed information login to the website';
+          
+            $message['body'][] =   $body;
+            $message['headers']['Reply-To'] = "";
+
+            break;
+    }        
+}
+
+
+?>

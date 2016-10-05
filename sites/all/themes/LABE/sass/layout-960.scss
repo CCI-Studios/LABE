@@ -1,0 +1,22 @@
+#page-wrapper {
+	min-width: 960px;
+}
+
+.container {
+	width: 960px;
+}
+
+#navigation {
+	
+
+	&:before {
+		content: none;
+	}
+}
+
+
+#widgets-left,
+#widgets-right {
+	float: left;
+	width: 50%;
+}

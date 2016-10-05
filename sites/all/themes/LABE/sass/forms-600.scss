@@ -1,0 +1,216 @@
+//newsletter block form
+.newsletter-block {
+	float: right;
+	width: 65.957446809%;
+	padding: 0 5% 0 10%;
+}
+
+//registration
+#user-register-form {
+
+	.form-item-name,
+	.field-name-field-street,
+	.field-name-field-state-province {
+		width: 48.717948718%;
+		margin-right: 1.282051282%; 
+		float: left;
+	}	
+
+	.field-name-field-postal-code1,	
+	.field-name-field-city
+	{
+		margin-left: 1.282051282%; 
+	}
+
+	.form-item-mail
+	{
+		width: 48.717948718%;
+		margin-left: 1.282051282%;
+		float: left;
+	}
+
+	.form-type-password {
+		width: 48.717948718%;
+		float: left;
+
+		&.form-item-pass-pass1 {
+			margin-right: 1.282051282%; 
+		}
+
+		&.form-item-pass-pass2 {
+			margin-left: 1.282051282%;
+		}
+	}
+
+	.field-name-field-name-organization,
+	.field-name-field-email-address,
+	.field-name-field-website,
+	.field-name-field-business-category,
+	.field-name-field-street,
+	.field-name-field-city,
+	.field-name-field-state-province,
+	.field-name-field-postal-code1{
+		width: 48.717948718%;
+		display: inline-block;
+	}
+
+	.sbSelector
+	{
+		border: 1px solid #dce4e9;
+		width: 100%;
+	}
+
+	.sbHolder ul
+	{
+		border: 1px solid #dce4e9;
+		width: 100%;
+
+		a
+		{
+			font-weight: normal;
+		}
+	}
+
+	.sbHolder li
+	{
+		border-bottom: 1px solid #dce4e9;
+	}
+
+	.field-name-field-business-category
+	{
+		a
+		{
+			text-decoration: none;
+		}
+	}
+
+	.field-name-field-introduction {
+		width: 48.717948718%;
+		float: right;
+		margin-top: 0;
+
+		textarea {
+			height: 206px;
+		}
+	}
+
+	.field-type-location {
+		.form-item {
+			width: 48.717948718%;
+			float: left;
+			clear: none;
+		}
+	}
+
+	.field-name-field-primary-contact,
+	.field-name-field-phone-number,
+	.field-name-field-fax-number,
+	.field-name-field-mobile-number,
+	.field-name-field-additional-contact-1,
+	.field-name-field-additional-contact-2 {
+		width: 48.717948718%;
+		display: inline-block;
+	}
+
+	.form-item-field-street-address-und-0-street,
+	.form-item-field-street-address-und-0-province,
+	.field-name-field-primary-contact,
+	.field-name-field-fax-number,
+	.field-name-field-additional-contact-1 {
+		margin-right: 1.282051282%; 
+	}
+
+	.form-item-field-street-address-und-0-city,
+	.form-item-field-street-address-und-0-postal-code,
+	.field-name-field-phone-number,
+	.field-name-field-mobile-number,
+	.field-name-field-additional-contact-2 {
+		margin-left: 1.282051282%; 
+	}
+
+	.form-item-field-street-address-und-0-street,
+	.form-item-field-street-address-und-0-city {
+		label {
+			margin-top: 0;
+		}
+	}
+
+	#payment-info {
+		width: 48.717948718%;
+		margin-right: 1.282051282%;
+		float: left;
+	}
+
+	.field-name-field-pricing-information,
+	.field-name-field-pricing-information-gold
+	{
+		width: 50%;
+		float: left;
+	}
+
+	.form-item-payment-method {
+		width: 48.717948718%;
+		margin-left: 1.282051282%;
+		float: left;
+
+		.form-item {
+			margin-left: 0;
+		}
+	}
+
+	#edit-actions {
+		clear: both;
+	}
+
+	.captcha {
+		width: 48.717948718%;
+		margin-left: 1.282051282%;
+		float: left;
+	}
+	
+}
+
+//contact form
+.block-contact-form {
+	.form-text,
+	.form-email {
+		width: 31%;
+		margin: 0 0 1.5em 3.5%;
+	}
+
+	.method-wrapper {
+		text-align: left;
+
+		> label {
+			float: left;
+			margin-right: 2em;
+		}
+
+		.form-type-radio {
+			margin: 0 3em;
+		}
+	}
+
+	.form-submit {
+		margin-top: 1em;
+	}
+
+	@at-root .page-node-17 #sidebar {
+		position: relative;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		width: 25%;
+		height: 0;
+		border-bottom: 45px solid #ffffff;
+		border-right: 45px solid transparent;
+	}
+
+
+	
+
+}

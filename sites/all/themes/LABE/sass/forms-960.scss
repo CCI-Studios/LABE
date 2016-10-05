@@ -1,0 +1,49 @@
+//search
+.block-search {
+	.form-submit {
+	  right: -3px;
+	}
+
+	.search-icon {
+		right: -3px;
+	}
+}
+
+//register
+
+//login
+#block-user-login {
+	@include container;
+	position: absolute;
+	top: 0;
+	padding: 0;
+
+	> .content {
+		top: 17px;
+		right: 0;
+		float: right
+	}
+
+	input.form-submit,
+	.sign-up a {
+		height: 35px;
+		line-height: 35px;
+		margin-left: 15px;
+	}
+
+	.form-actions {
+		margin: 0;
+		float: left;
+		position: inherit;
+	}
+
+	.sign-up {
+		float: left;
+		position: inherit;
+	}
+
+	.login-forgot {
+		position: inherit;
+	}
+
+}

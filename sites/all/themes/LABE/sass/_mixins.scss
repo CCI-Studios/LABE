@@ -1,0 +1,17 @@
+@mixin sr-only {
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    margin-left: -1px;
+    border: 0;
+    padding: 0;
+}
+
+@mixin container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}

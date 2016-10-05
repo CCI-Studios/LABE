@@ -1,0 +1,58 @@
+//subscriptions
+.view-subscriptions {
+	.views-row {
+		float: left;
+		width: 44.680851064%;
+	}
+
+	.views-row-1 {
+		margin: 0 2.1276595745% 0 3.085106383%;
+	}
+
+	.views-row-2 {
+		margin: 0 3.085106383% 0 2.1276595745%;
+	}
+}
+
+//faqs
+.view-faqs {
+
+	.views-row {
+		float: left;
+		width: 48%;
+
+		&.views-row-even {
+			margin-left: 4%;
+		}
+
+		&.views-row-odd {
+			clear: both;
+		}
+	}
+}
+
+//contact page
+.contact-page-widget {
+
+	.icon-fax,
+	.icon-email {
+		&:before {
+			content: "";
+			position: absolute;
+			left: -28px;
+			top: 50%;
+			margin-top: -23px;
+			height: 46px;
+			width: 57px;
+			background: url(../images/icon-slash-2x.png) center center no-repeat;
+			background-size: 100%;
+		}
+	}
+}
+.contact-widget {
+	height: 325px;
+}
+
+#contact-map {
+	height: 325px;
+}

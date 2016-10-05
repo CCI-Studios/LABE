@@ -1,0 +1,223 @@
+//pager and header
+
+.view .date-nav-wrapper .pager {
+
+	.date-prev,
+	.date-next {
+		a {
+			padding: 0;
+			margin: 0;
+			position: relative;
+		}
+	}
+
+	.date-prev {
+		float: left;
+		margin: 1em 0;
+
+		a {
+			padding-left: 20px;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 9px;
+				height: 15px;
+				left: 0;
+				top: 1px;
+				background: url(../images/icon-prev-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+
+	.date-next {
+		float: right;
+		margin: 1em 0;
+		a {
+			padding-right: 20px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				width: 9px;
+				height: 15px;
+				right: 0;
+				top: 1px;
+				background: url(../images/icon-next-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+
+.view .date-nav-wrapper .date-prev, 
+.view .date-nav-wrapper .date-next {
+	position:relative;
+	right:auto;
+	left:auto;
+	margin: 0;
+	background: none;
+	text-transform: uppercase;
+
+	a {
+		font-size: 1.333333em;
+		font-weight: 400;
+	}
+}
+
+//calendar
+.view-calendar {
+	margin-top: 2em;
+
+	.date-nav {
+		padding: 0;
+
+		h3 {
+			font-size: 24px;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+	}
+
+	.month-view .full {
+		margin-top: 1em;
+
+		td {
+			vertical-align: middle;
+			border: 1px solid #d0d7eb;
+			border-left: none;
+			border-right: none;
+			padding: 0 0 2em 0;
+			margin-bottom: 2em;
+
+			&.single-day,
+			&.date-box {
+				background: #ffffff;
+				color: $blue;
+
+				&.empty {
+					background: #fff;
+					.day {color: #fff;}
+				}
+			}
+
+			&.date-box,
+			&.date-box a {
+				font-weight: 100;
+			}
+
+			&.past,
+			&.future {
+
+				.views-field-field-event-date span {
+					font-weight: 100;
+					font-size: 12px;
+				}
+			}
+
+			&.single-day div.monthview {
+				background: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.day {
+				color: $blue;
+				float: left;
+				padding: 6px 7px 0;
+				font-size: 14px;
+				a { color: $blue }
+			}
+
+			.inner {
+				.item {
+					margin-top: 10px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:first-child {
+						.views-field-nothing {
+							display: block;
+							position: absolute;
+							top: 0;
+						}
+					}
+				}
+			}
+
+			.views-field-title {
+				margin-left: 80px;
+
+				a {
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+
+			.views-field-field-event-date {
+				margin-left: 80px;
+
+				.date-display-single {
+					font-weight: 100;
+					font-size: 12px;
+				}
+			}
+
+			.views-field-nothing {
+				display: none;
+			}
+
+			.monthday {
+				font-size: 24px;
+				margin-right: 4px;
+			}
+
+			.weekday {
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 100;
+
+				.date-display-single {
+					font-weight: 400;
+				}
+			}
+
+			.stripe {
+				height: 0;
+			}
+		}
+
+		tr {
+			&.date-box {
+				display: none;
+			}
+
+			&.single-day {
+				td.single-day {
+					width: 100%;
+					display: block;
+					height: auto !important;
+				}
+
+				td.no-entry,
+				td.empty {
+					display: none;
+				}
+			}
+
+		}
+
+		th.days {
+			display: none;
+		}
+
+		tr td.single-day.today {
+			border: 1px solid #d0d7eb;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}

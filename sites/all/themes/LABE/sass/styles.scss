@@ -1,0 +1,94 @@
+.clear {
+	clear: both;
+}
+
+.sr-only {
+	@include sr-only;
+}
+
+.btn {
+	text-transform: uppercase;
+	padding: 15px 60px;
+	display: inline-block;
+	outline: none;
+	font-weight: 700;
+	font-size: 1.2em;
+
+	&:hover,
+	&:active,
+	&:focus {
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+		text-decoration: none;
+	}
+
+	.region-content & {
+		margin-top: 1em;
+	}
+}
+
+.btn-blue {
+	border: 1px solid $blue;
+	background: #ffffff;
+
+	&:hover,&:active,&:focus {
+		background: $blue;
+		color: #ffffff;
+	}
+}
+
+.blue-right {
+	background: $blue;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 95%;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: -110px;
+		top: 0;
+		width: 10px;
+		height: 0;
+		border-bottom: 100px solid #fff;
+		border-left: 100px solid transparent;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: -100px;
+		top: 0;
+		width: 0;
+		height: 0;
+		border-bottom: 100px solid $blue;
+		border-left: 100px solid transparent;
+	}
+
+	#header & {
+		left: 95%;
+			&:after {
+			left: -180px;
+			border-bottom: 140px solid $blue;
+			border-left: 180px solid transparent;
+		}
+	}
+}
+
+.not-960 {
+	display: block;
+}
+
+.only-960 {
+	display: none;
+}
+
+.user-picture
+{
+	img
+	{
+		width: auto!important;
+	}
+}

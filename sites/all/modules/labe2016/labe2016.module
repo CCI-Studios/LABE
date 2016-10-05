@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the labe2016 feature.
+ */
+
+include_once 'labe2016.features.inc';

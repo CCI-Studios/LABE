@@ -1,0 +1,16 @@
+#page-wrapper {
+  min-width: 960px; }
+
+.container {
+  width: 960px; }
+
+#navigation {
+  position: inherit;
+  overflow: inherit; }
+  #navigation:before {
+    content: none; }
+
+#widgets-left,
+#widgets-right {
+  float: left;
+  width: 50%; }

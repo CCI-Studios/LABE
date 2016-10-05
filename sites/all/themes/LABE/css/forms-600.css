@@ -1,0 +1,125 @@
+.newsletter-block {
+  float: right;
+  width: 65.957446809%;
+  padding: 0 5% 0 10%; }
+
+#user-register-form .form-item-name,
+#user-register-form .field-name-field-street,
+#user-register-form .field-name-field-state-province {
+  width: 48.717948718%;
+  margin-right: 1.282051282%;
+  float: left; }
+#user-register-form .field-name-field-postal-code1,
+#user-register-form .field-name-field-city {
+  margin-left: 1.282051282%; }
+#user-register-form .form-item-mail {
+  width: 48.717948718%;
+  margin-left: 1.282051282%;
+  float: left; }
+#user-register-form .form-type-password {
+  width: 48.717948718%;
+  float: left; }
+  #user-register-form .form-type-password.form-item-pass-pass1 {
+    margin-right: 1.282051282%; }
+  #user-register-form .form-type-password.form-item-pass-pass2 {
+    margin-left: 1.282051282%; }
+#user-register-form .field-name-field-name-organization,
+#user-register-form .field-name-field-email-address,
+#user-register-form .field-name-field-website,
+#user-register-form .field-name-field-business-category,
+#user-register-form .field-name-field-street,
+#user-register-form .field-name-field-city,
+#user-register-form .field-name-field-state-province,
+#user-register-form .field-name-field-postal-code1 {
+  width: 48.717948718%;
+  display: inline-block; }
+#user-register-form .sbSelector {
+  border: 1px solid #dce4e9;
+  width: 100%; }
+#user-register-form .sbHolder ul {
+  border: 1px solid #dce4e9;
+  width: 100%; }
+  #user-register-form .sbHolder ul a {
+    font-weight: normal; }
+#user-register-form .sbHolder li {
+  border-bottom: 1px solid #dce4e9; }
+#user-register-form .field-name-field-business-category a {
+  text-decoration: none; }
+#user-register-form .field-name-field-introduction {
+  width: 48.717948718%;
+  float: right;
+  margin-top: 0; }
+  #user-register-form .field-name-field-introduction textarea {
+    height: 206px; }
+#user-register-form .field-type-location .form-item {
+  width: 48.717948718%;
+  float: left;
+  clear: none; }
+#user-register-form .field-name-field-primary-contact,
+#user-register-form .field-name-field-phone-number,
+#user-register-form .field-name-field-fax-number,
+#user-register-form .field-name-field-mobile-number,
+#user-register-form .field-name-field-additional-contact-1,
+#user-register-form .field-name-field-additional-contact-2 {
+  width: 48.717948718%;
+  display: inline-block; }
+#user-register-form .form-item-field-street-address-und-0-street,
+#user-register-form .form-item-field-street-address-und-0-province,
+#user-register-form .field-name-field-primary-contact,
+#user-register-form .field-name-field-fax-number,
+#user-register-form .field-name-field-additional-contact-1 {
+  margin-right: 1.282051282%; }
+#user-register-form .form-item-field-street-address-und-0-city,
+#user-register-form .form-item-field-street-address-und-0-postal-code,
+#user-register-form .field-name-field-phone-number,
+#user-register-form .field-name-field-mobile-number,
+#user-register-form .field-name-field-additional-contact-2 {
+  margin-left: 1.282051282%; }
+#user-register-form .form-item-field-street-address-und-0-street label,
+#user-register-form .form-item-field-street-address-und-0-city label {
+  margin-top: 0; }
+#user-register-form #payment-info {
+  width: 48.717948718%;
+  margin-right: 1.282051282%;
+  float: left; }
+#user-register-form .field-name-field-pricing-information,
+#user-register-form .field-name-field-pricing-information-gold {
+  width: 50%;
+  float: left; }
+#user-register-form .form-item-payment-method {
+  width: 48.717948718%;
+  margin-left: 1.282051282%;
+  float: left; }
+  #user-register-form .form-item-payment-method .form-item {
+    margin-left: 0; }
+#user-register-form #edit-actions {
+  clear: both; }
+#user-register-form .captcha {
+  width: 48.717948718%;
+  margin-left: 1.282051282%;
+  float: left; }
+
+.block-contact-form .form-text,
+.block-contact-form .form-email {
+  width: 31%;
+  margin: 0 0 1.5em 3.5%; }
+.block-contact-form .method-wrapper {
+  text-align: left; }
+  .block-contact-form .method-wrapper > label {
+    float: left;
+    margin-right: 2em; }
+  .block-contact-form .method-wrapper .form-type-radio {
+    margin: 0 3em; }
+.block-contact-form .form-submit {
+  margin-top: 1em; }
+.page-node-17 #sidebar {
+  position: relative; }
+.block-contact-form:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 25%;
+  height: 0;
+  border-bottom: 45px solid #ffffff;
+  border-right: 45px solid transparent; }

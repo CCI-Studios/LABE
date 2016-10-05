@@ -1,0 +1,7 @@
+.contact-page-widget {
+  text-align: center; }
+  .contact-page-widget .icon-phone,
+  .contact-page-widget .icon-fax,
+  .contact-page-widget .icon-email {
+    width: 33.333333333%;
+    position: relative; }

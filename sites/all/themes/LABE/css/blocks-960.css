@@ -1,0 +1,28 @@
+#logo {
+  width: auto; }
+
+.view-slideshow .bg-image {
+  height: 491px; }
+.view-slideshow h2 {
+  font-size: 3.4em; }
+.view-slideshow .views-field-nothing .slide-text {
+  font-size: 1.625em; }
+.view-slideshow .views-field-nothing > span > div {
+  padding-right: 50%; }
+
+.header-block .content {
+  padding-right: 30%; }
+
+.contact-widget {
+  height: 365px; }
+
+#contact-map {
+  height: 365px; }
+
+.view-members-listing .views-row:nth-child(odd) {
+  background-color: #e7ebf5; }
+.view-members-listing .views-field {
+  display: inline-block;
+  width: 24%;
+  padding: 20px;
+  vertical-align: top; }

@@ -1,0 +1,262 @@
+.view-members-listing
+{	
+
+	.views-row:nth-child(odd)
+	{
+		background-color:#e7ebf5;
+	}
+
+	.view-content
+	{
+		margin-top:10px;
+	}
+
+	.views-field
+	{
+		display: inline-block;
+		width: 23%;
+		padding: 20px;
+		vertical-align: top;
+	}
+
+	.sbSelector.changeback
+	{
+		background:url(../images/arrow-up.png) no-repeat !important;
+		background-position: 95%!important;
+	}
+
+	.view-filters
+	{
+		padding-left:50px;
+	}
+
+	.view-filters,
+	.view-header,
+	#edit-field-business-category-tid-wrapper
+	{
+		display: inline-block;
+	}
+
+	#edit-field-business-category-tid-wrapper
+	{
+		width: 218px;
+	}
+
+	.views-field-nothing 
+	{	
+		width:20px;
+		a
+		{
+			background: url(../images/arrow-down.png) no-repeat center;
+			width: 20px;
+			height: 20px;
+			font-size: 0px;
+			display: block;
+			color: transparent;
+		}
+	}
+
+	.view-header
+	{	
+		vertical-align: top;
+		padding-top:20px;
+		ul li
+		{
+			list-style: none;
+			display: inline-block;
+			margin: 0px;
+			font-size: 15px;
+		}
+	}
+
+	.views-exposed-form
+	{	
+		.form-submit
+		{		
+			background: transparent;
+			border: 1px solid;
+			margin-top: 0px;
+			height: 40px;
+		}
+	
+		.description
+		{
+			display: none;
+		}
+
+		a
+		{
+			text-decoration: none;
+		}
+
+		.views-submit-button
+		{
+			padding-right: 0px;
+		}
+	}
+}
+
+.view-member-description
+{	
+	#profile-picture
+	{	
+		float: left;
+		vertical-align: middle;
+		line-height: 280px;
+		width: 45%;
+		text-align: center;
+
+		img
+		{
+			width: auto;
+		}
+	}
+
+	.right
+	{
+		float: right;
+		width: 50%;
+	}
+
+	.org-name
+	{
+		font-size: 1.8em;
+		padding-bottom: 20px;
+	}
+
+	.org-name+div
+	{
+		font-size: 1.3em;
+		padding-bottom:20px;
+	}
+
+	#org-info 
+	{	
+		padding: 20px 0px;
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #ccc;
+		margin-bottom: 20px;
+
+		&> div
+	
+		{
+			padding-bottom: 20px;
+
+			span
+			{
+				width: 100px;
+				display: inline-block;
+				padding-left: 35px;
+				position: relative;
+			}
+		}
+	}	
+
+	#org-info+div
+	{
+		color:#7e7e7e;
+	}
+
+	.website-name:before,
+	.phone:before,
+	.mail:before,
+	.address:before
+	{
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		background-size: 100%;
+	}
+
+	.phone:before
+	{
+		background: url(../images/icon-phone-2x.png) no-repeat center;
+		background-size: 100%;
+	}
+
+	.address:before
+	{
+		background: url(../images/marker-info.png) no-repeat center;
+		background-size: contain;
+	}
+
+	.website-name:before
+	{
+		background: url(../images/pointer.png) no-repeat center;
+		background-size: contain;
+	}
+
+	.mail:before
+	{
+		background: url(../images/icon-email-2x.png) no-repeat center;
+		background-size: 100%;
+	}
+}
+
+   .sbSelector
+	{
+		border: 1px solid $blue;
+	}
+
+	.sbHolder
+	{	
+		position: relative;
+		li
+		{
+			list-style: none;
+			border-bottom: 1px solid $blue;
+
+
+			a
+			{
+				display: block;
+				padding: 10px;
+				color:$blue;
+				font-weight: bold;
+
+				&:hover
+				{
+					background:$blue;
+					color:white;
+
+				}
+			}
+		}
+
+		ul
+		{
+			position: absolute;
+			background: white;
+			width:200px;
+			padding-left: 0px;
+			border: 1px solid $blue;
+			z-index: 999;
+			
+		}
+	}
+
+	#edit-field-business-category-tid-wrapper,
+	#edit-field-business-category
+	{
+		.sbHolder ul
+		{
+			height: 500px;
+			overflow-y: scroll;
+		}
+	}
+
+
+	.sbSelector
+	{
+		width: 200px;
+		display: block;
+		border: 1px solid $blue;
+		padding: 10px;
+		color:$blue;
+		font-weight: bold;
+		background:url(../images/arrow-down.png) no-repeat;
+		background-position: 95%;
+	}

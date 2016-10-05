@@ -1,0 +1,27 @@
+.view .date-nav-wrapper .pager {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+
+	.date-prev {
+		margin: 0;
+	}
+
+	.date-next {
+		margin: 0;
+	}
+}
+
+.view-calendar {
+	.month-view .full {
+		td {
+			.views-field-title {
+
+				a {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

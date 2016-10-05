@@ -1,0 +1,114 @@
+.container {
+	@include container;
+}
+
+#page-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+#header {
+	position: relative;
+	
+	> .container {
+		position: relative;
+	}
+
+	> div {
+		padding: 2em 10px;
+	}
+}
+
+@media only screen and (max-width: 960px)
+{
+	#navigation
+	{
+		overflow: hidden;
+		max-height: 0;
+		position: relative;
+	}	
+}
+
+#navigation {
+
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
+	> .container {
+		padding: 0;
+	}
+
+	&:before {
+		content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+		z-index: 10;
+	}
+
+	.open-menu & {
+		max-height: 800px;
+	}
+}
+
+#content {
+	> div {
+		padding: 3em 10px;
+	}
+
+	.not-front & {
+		position: relative;
+		padding-bottom: 45px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 25%;
+			height: 0;
+			border-bottom: 45px solid $blue;
+			border-right: 45px solid transparent;
+		}
+	}
+}
+#sidebar {
+	background: $blue;
+}
+
+#widgets {
+	.not-front & {
+		border-top: 5px solid $blue;
+	}
+
+	> div {
+		@include container;
+		max-width: 1440px;
+		padding: 0;
+	}
+}
+
+#widgets-left,
+#widgets-right {
+	position: relative;
+}
+
+#footer {
+	font-size: .75em;
+	color: $blue;
+	background: #e5e5e5;
+	position: relative;
+}
+
+#footerinfo {
+	float: left;
+	padding: 25px 0;
+}

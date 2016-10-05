@@ -1,0 +1,4 @@
+name = Custom user registration Paypal payment
+core = 7.x
+package = subscription
+version = "7.x-1.0"
